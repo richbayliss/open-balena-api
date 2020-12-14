@@ -165,3 +165,7 @@ export const DEFAULT_SUPERVISOR_POLL_INTERVAL = intVar(
 	'DEFAULT_SUPERVISOR_POLL_INTERVAL',
 	10 * 60 * 1000,
 );
+
+export const EXTRA_CONTAINERS = optionalVar('EXTRA_CONTAINERS', '')
+	.split(',')
+	.map((s) => s.trim());
