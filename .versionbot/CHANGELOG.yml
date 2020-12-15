@@ -1,4 +1,47 @@
 - commits:
+    - subject: Add feature & tests
+      hash: 31a44043ec237b6aa348ab09e6bf3b7befcd459d
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Rich Bayliss <rich@balena.io>
+        signed-off-by: Rich Bayliss <rich@balena.io>
+      author: Rich Bayliss
+      nested: []
+    - subject: Refactor tests to support new model
+      hash: 4d6e0438f56c91691083b3b9d39b290529509e1b
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Rich Bayliss <rich@balena.io>
+        signed-off-by: Rich Bayliss <rich@balena.io>
+      author: Rich Bayliss
+      nested: []
+    - subject: Add model changes
+      hash: c101c5909c029d30408f788dae905a5006d3b105
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Rich Bayliss <rich@balena.io>
+        signed-off-by: Rich Bayliss <rich@balena.io>
+      author: Rich Bayliss
+      nested: []
+    - subject: Expose SYSTEM_APPS via config
+      hash: 2b9124d26ce9d0fb4b0679c2fa11219ea454c757
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Rich Bayliss <rich@balena.io>
+        signed-off-by: Rich Bayliss <rich@balena.io>
+      author: Rich Bayliss
+      nested: []
+  version: 0.110.10
+  date: 2020-12-15T10:56:07.838Z
+- commits:
     - subject: Simplify/optimize rules for runnable releases
       hash: 0d604443cc4797af35bce54dc1c4c5348f3a10c8
       body: ''
