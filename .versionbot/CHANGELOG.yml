@@ -1,4 +1,25 @@
 - commits:
+    - subject: Add RESIN_HOST_SPLASH_IMAGE config var in the schema
+      hash: b1c8b2c6bb714d61700d2c2709699dba4de6efaf
+      body: ''
+      footer:
+        Resolves: '#530'
+        resolves: '#530'
+        Change-type: minor
+        change-type: minor
+        Depends-on: 'https://github.com/balena-io/balena-supervisor/pull/1566'
+        depends-on: 'https://github.com/balena-io/balena-supervisor/pull/1566'
+        See: >-
+          https://www.flowdock.com/app/rulemotion/r-etcherprv/threads/uBhQEVeU3r8gmPdHIzpfffbhSGM
+        see: >-
+          https://www.flowdock.com/app/rulemotion/r-etcherprv/threads/uBhQEVeU3r8gmPdHIzpfffbhSGM
+        Signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+        signed-off-by: Thodoris Greasidis <thodoris@balena.io>
+      author: Thodoris Greasidis
+      nested: []
+  version: 0.117.0
+  date: 2021-01-07T13:13:40.695Z
+- commits:
     - subject: Add `user has direct access to application` virtual resource
       hash: 9784a799935138d1d06432e6777907ddae73d6a3
       body: ''
