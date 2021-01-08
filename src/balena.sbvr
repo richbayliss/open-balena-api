@@ -729,6 +729,18 @@ Fact type: config has scope
 Fact type: config has description (Auth)
 	Necessity: each config has at most one description (Auth).
 
+-- authentication delegate
+
+Term: authentication delegate
+
+Fact type: authentication delegate has public key
+	Necessity: each authentication delegate has at most one public key.
+
+Fact type: authentication delegate has uuid
+	Necessity: each authentication delegate has exactly one uuid
+	Necessity: each uuid is of exactly one authentication delegate.
+	Necessity: each authentication delegate has a uuid that has a Length (Type) that is equal to 32.
+
 
 -- Rules
 
