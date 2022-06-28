@@ -416,10 +416,12 @@ const getSupervisorAppState = (device: AnyObject): StateV3[string]['apps'] => {
 
 const getHostAppState = (device: AnyObject): StateV3[string]['apps'] => {
 	const osRelease = device.should_be_operated_by__release[0];
+	console.log('osRelease:', osRelease);
+	console.log('device:', device);
 	if (!osRelease) {
 		return {};
 	}
 	const osApp = osRelease.belongs_to__application[0];
-	// We use an empty config as we don't want any labels applied to the supervisor due to user app config
+	// We use an empty config as we don't want any labels applied to the host OS due to user app config
 	return getAppState(device, osApp, osRelease, {});
 };
