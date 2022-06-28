@@ -261,6 +261,16 @@ const deviceExpand: Expand = {
 			},
 		},
 	},
+	should_be_operated_by__release: {
+		...releaseExpand,
+		$expand: {
+			...releaseExpand.$expand,
+			belongs_to__application: {
+				$select: ['id', 'uuid', 'app_name', 'is_host', 'is_of__class'],
+				$expand: appExpand,
+			},
+		},
+	},
 };
 
 const stateQuery = _.once(() =>
@@ -290,6 +300,7 @@ const getStateV3 = async (req: Request, uuid: string): Promise<StateV3> => {
 	if (supervisorRelease) {
 		apps = {
 			...getSupervisorAppState(device),
+			...getHostAppState(device),
 			...apps,
 		};
 	}
@@ -401,4 +412,14 @@ const getSupervisorAppState = (device: AnyObject): StateV3[string]['apps'] => {
 	const supervisorApp = supervisorRelease.belongs_to__application[0];
 	// We use an empty config as we don't want any labels applied to the supervisor due to user app config
 	return getAppState(device, supervisorApp, supervisorRelease, {});
+};
+
+const getHostAppState = (device: AnyObject): StateV3[string]['apps'] => {
+	const osRelease = device.should_be_operated_by__release[0];
+	if (!osRelease) {
+		return {};
+	}
+	const osApp = osRelease.belongs_to__application[0];
+	// We use an empty config as we don't want any labels applied to the supervisor due to user app config
+	return getAppState(device, osApp, osRelease, {});
 };
