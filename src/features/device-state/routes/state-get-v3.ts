@@ -300,6 +300,13 @@ const getStateV3 = async (req: Request, uuid: string): Promise<StateV3> => {
 	if (supervisorRelease) {
 		apps = {
 			...getSupervisorAppState(device),
+			...apps,
+		};
+	}
+
+	const hostOsRelease = device.should_be_operated_by__release[0];
+	if (hostOsRelease) {
+		apps = {
 			...getHostAppState(device),
 			...apps,
 		};
