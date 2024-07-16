@@ -15,6 +15,7 @@ import * as deviceState from './features/device-state';
 import * as deviceProvisioning from './features/device-provisioning';
 import * as deviceProxy from './features/device-proxy';
 import * as vpn from './features/vpn';
+import * as authDelegate from './features/authentication-delegates';
 
 export const setup = (
 	app: Application,
@@ -26,6 +27,7 @@ export const setup = (
 ) => {
 	varsSchema.setup(app);
 	auth.setup(app, onLogin);
+	authDelegate.setup(app, onLogin);
 	deviceProvisioning.setup(app);
 	deviceState.setup(app);
 	deviceLogs.setup(

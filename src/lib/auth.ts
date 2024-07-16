@@ -31,6 +31,7 @@ export const ROLES: {
 		'resin.actor.delete?id eq @__ACTOR_ID',
 		'resin.api_key.read?is_of__actor eq @__ACTOR_ID',
 		'resin.application.all',
+		'resin.authentication_delegate.all',
 		'resin.device_type.read',
 		'resin.device_type_alias.read',
 		'resin.cpu_architecture.read',
